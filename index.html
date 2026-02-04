@@ -1,59 +1,173 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026企业文化互评问卷</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            padding: 10px;
-            margin: 10px 0;
-            background-color: #e9e9e9;
-            border-radius: 5px;
-        }
-        a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        a:hover {
-            color: #007BFF;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2026企业文化互评问卷</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e90ff, #4facfe);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #1e90ff;
+      margin-bottom: 10px;
+    }
+
+    .stats {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .stats span {
+      font-weight: bold;
+      color: #1e90ff;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 12px;
+      margin: 10px 0;
+      background-color: #f0f6ff;
+      border-radius: 6px;
+      transition: background-color 0.2s;
+    }
+
+    li.completed {
+      background-color: #d6ecff;
+    }
+
+    a {
+      text-decoration: none;
+      color: #003366;
+      font-weight: bold;
+      display: block;
+    }
+
+    a:hover {
+      color: #1e90ff;
+    }
+
+    .check {
+      color: green;
+      margin-right: 8px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>2026企业文化互评问卷</h1>
-        <ul>
-            <li><a href="https://v.wjx.cn/vm/exHfIe0.aspx#" target="_blank">前台业务部门 → 后台支持部门评分问卷（李肃）</a></li>
-            <li><a href="https://v.wjx.cn/vm/Y2FWUBQ.aspx#" target="_blank">前台业务部门 → 后台支持部门评分问卷（刘瑞雪）</a></li>
-            <li><a href="https://v.wjx.cn/vm/tO0jiHd.aspx#" target="_blank">前台业务部门 → 后台支持部门评分问卷（田梦珂）</a></li>
-            <li><a href="https://v.wjx.cn/vm/OWWcOIN.aspx#" target="_blank">前台业务部门 → 后台支持部门评分问卷（盛彦彦）</a></li>
-            <li><a href="https://v.wjx.cn/vm/OWWcOIN.aspx#" target="_blank">前台业务部门 → 后台支持部门评分问卷（王军锋）</a></li>
-            <li><a href="https://tp.wjx.top/vm/wAGwM7y.aspx#" target="_blank">前台业务部门 → 后台支持部门评分问卷（许雪艳）</a></li>
-        </ul>
+
+  <div class="container">
+    <h1>2026企业文化互评问卷</h1>
+
+    <div class="stats">
+      目录总数：<span id="totalCount">0</span> |
+      已完成：<span id="completedCount">0</span>
     </div>
+
+    <ul id="surveyList">
+      <li data-id="li_su">
+        <a href="https://v.wjx.cn/vm/exHfIe0.aspx#" target="_blank">
+          前台业务部门 → 后台支持部门评分问卷（李肃）
+        </a>
+      </li>
+
+      <li data-id="li_liu">
+        <a href="https://v.wjx.cn/vm/Y2FWUBQ.aspx#" target="_blank">
+          前台业务部门 → 后台支持部门评分问卷（刘瑞雪）
+        </a>
+      </li>
+
+      <li data-id="li_tian">
+        <a href="https://v.wjx.cn/vm/tO0jiHd.aspx#" target="_blank">
+          前台业务部门 → 后台支持部门评分问卷（田梦珂）
+        </a>
+      </li>
+
+      <li data-id="li_sheng">
+        <a href="https://v.wjx.cn/vm/PtdMfO7.aspx#" target="_blank">
+          前台业务部门 → 后台支持部门评分问卷（盛彦彦）
+        </a>
+      </li>
+
+      <li data-id="li_wang">
+        <a href="https://v.wjx.cn/vm/OWWcOIN.aspx#" target="_blank">
+          前台业务部门 → 后台支持部门评分问卷（王军锋）
+        </a>
+      </li>
+
+      <li data-id="li_xu">
+        <a href="https://v.wjx.cn/vm/rQDMgA1.aspx#" target="_blank">
+          前台业务部门 → 后台支持部门评分问卷（许雪艳）
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    const STORAGE_KEY = "completedSurveys";
+    const listItems = document.querySelectorAll("#surveyList li");
+    const totalCount = document.getElementById("totalCount");
+    const completedCount = document.getElementById("completedCount");
+
+    let completed = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+
+    function updateStats() {
+      totalCount.textContent = listItems.length;
+      completedCount.textContent = completed.length;
+    }
+
+    function markCompleted(li) {
+      const id = li.getAttribute("data-id");
+
+      if (!completed.includes(id)) {
+        completed.push(id);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(completed));
+      }
+
+      li.classList.add("completed");
+
+      const link = li.querySelector("a");
+      if (!link.innerHTML.includes("✅")) {
+        link.innerHTML = "✅ " + link.innerHTML;
+      }
+
+      updateStats();
+    }
+
+    listItems.forEach(li => {
+      const id = li.getAttribute("data-id");
+
+      if (completed.includes(id)) {
+        markCompleted(li);
+      }
+
+      li.querySelector("a").addEventListener("click", () => {
+        markCompleted(li);
+      });
+    });
+
+    updateStats();
+  </script>
+
 </body>
 </html>
